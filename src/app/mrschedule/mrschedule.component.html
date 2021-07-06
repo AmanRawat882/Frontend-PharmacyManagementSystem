@@ -1,0 +1,48 @@
++<div style="text-align: center;">
+    <h2 ><b>MR Scheduler</b></h2>
+    <div class="row" >
+        <div class="col-sm-4">
+            <div class="card" style=" background-color: lightblue;">
+              <form >
+                  <label >
+                    Choose your preferred appointment date (required):
+                    <input type="date" [(ngModel)]='date' name="date" min="2021-06-29" max="2021-07-10" required>
+                    <span class="validity"></span>
+                  </label>
+                    <button  (click)='getMr()' style="background-color: green;">Submit</button>
+              </form>
+          </div>
+   
+      </div>
+   
+    <div  class="col-sm-8">
+      <table class="table table-hover"><thead>
+        <tr>
+          <th>id</th>
+          <th>MR Name</th>
+          <th>Doctor Name</th>
+          <th>Meeting Date</th>
+          <th>Meeting slot</th>
+          <th>Contact</th>
+          <th>Medicines</th>
+          <th>Treating Ailment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stock of schedule">
+        <td> {{stock.id}}</td>
+        <td>{{stock.repName}}</td>
+        <td>{{stock.doctorName}}</td>
+        <td>{{stock.meetingSlot}}</td>
+        <td>{{stock.meetingDate}}</td>
+        <td>{{stock.doctorContactNumber}}</td>
+        <td>{{stock.medicines}}</td>
+        <td>{{stock.treatingAilment}}</td>
+      </tr>
+  </tbody>
+</table>
+  </div>
+  </div>
+    
+</div>
+  

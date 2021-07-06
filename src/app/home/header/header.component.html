@@ -1,0 +1,15 @@
+<div class="header">
+    <a href="#default" class="logo">Pharmacy Medicine Supply Management </a>
+    <div class="header-right">
+      <a class="active" href="#home">Home</a>
+      <a href="./mr-schedule">MR Schedule</a>
+      <a href="./place-order">Place Order</a>
+      <a href="./check-stocks">Check Stocks</a>
+      <a href="./about-us">About Us</a>
+      <a href="./contact-us">Contact Us</a>
+      
+      <a  *ngIf="!authenticated" mdbRippleRadius href="./login" (click)="refresh()">Log In</a>
+      <button *ngIf="authenticated"><a   mdbRippleRadius (click)="logout()" (click)="refresh()" href="./login">Log Out</a></button>
+      
+    </div>
+  </div>

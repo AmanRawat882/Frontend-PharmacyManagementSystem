@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.w3-hover-opacity {cursor: pointer;}
+.bgimg-1 {
+  background-image: url('../../../assets/images/pharmacy.jpg');
+  min-height: 100%;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 550px;
+  }
+}
+</style>
+<body>
+<div  id="home">
+  <div class="container">
+    <h2>Welcome to Pharmacy Management System</h2>
+    <br>
+    <div class="row" style="padding-left: 50px; padding-right: 50px;" >
+      <div class="col-sm-2"></div>
+      <div class="col-sm-4">
+        <div class="card">
+          <img src="../../../assets/images/Schedule.jpg" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h4><b>MR Schedule</b></h4>
+            <p>Schedule an appointment with MR</p>
+            <button><a href="./mr-schedule">Click Here</a></button>
+            <br> <br>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <img src="../../../assets/images/medicine.jpg" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h4><b>Check Stocks</b></h4>
+            <p>Check the stock of available medicines</p>
+            <button><a href="./check-stocks">Click Here</a></button>
+            <br><br>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+  </div>  
+</div>
+</body>
+</html>
