@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "heroku-postbuild": "ng build --prod",
     "watch": "ng build --watch --configuration development",
@@ -29,8 +29,8 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.0.0",
-    "@angular/cli": "~12.0.0",
-    "@angular/compiler-cli": "~12.0.0",
+    "@angular/cli": "^12.1.1",
+    "@angular/compiler-cli": "^12.0.5",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~3.7.0",
