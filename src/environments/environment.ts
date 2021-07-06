@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
+  production: true,
   apiBaseUrlLogin:'http://13.235.133.10:8084/api/auth/login'
 };
 
