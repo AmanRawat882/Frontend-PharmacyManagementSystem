@@ -9,10 +9,10 @@ const express = require('express');
 const app = express();
 app.use(requireHTTPS);
 
-app.use(express.static('./dist/pharmacy-medicine-supply-management-system'));
+app.use(express.static('./dist/Frontend-PharmacyManagementSystem'));
 
 app.get('/*', function(req, res) {
-    res.sendFile('index.html', {root: 'dist/pharmacy-medicine-supply-management-system/'}
+    res.sendFile('index.html', {root: 'dist/Frontend-PharmacyManagementSystem/'}
   );
   });
   
