@@ -1,28 +1,39 @@
-<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
-  <table formArrayName="quantities">
+<div class="conatiner">
+  <div class="row">
     <h2>Medicine Supply</h2>
-    <tr>  
-      <th colspan="2">Add Multiple Quantity:</th>  
-      <th width="150px"><button type="button" (click)="addQuantity()">Add</button></th>  
-    </tr>  
-    <tr *ngFor="let quantity of quantities().controls; let i=index" [formGroupName]="i">
-    
-<td><label for="name">Select names:</label><br>
-        <select id='name' formControlName="medicineName" class="form-control">
-          <option *ngFor="let stock of stocks" [ngValue]='stock.name'>
-            {{stock.name}}
-          </option>
-        </select>
-</td>
-<td>
-<label for="quantity">Enter quantity of Medicine</label>
-<input type="number" formControlName="demandCount" class="form-control"> 
-</td>
-<td>  
-  <button (click)="removeQuantity(i)" class="btn btn-danger">Remove</button>  
-</td>  
-</tr>
-       
-<button type="submit">Submit</button>
-</table>
-</form>
+    <div class="col-sm">
+      <img src="../../assets/unnamed.jpg">
+    </div>
+    <div class="col-sm">
+      <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+        <table formArrayName="quantities">
+         
+          <thead>
+            <tr>
+              <th colspan="2">Add Medicines:</th>  
+              <th width="150px"><button type="button" class="btn btn-success"(click)="addQuantity()">Add</button></th>
+            </tr>
+          </thead>
+          <tr *ngFor="let quantity of quantities().controls; let i=index" [formGroupName]="i">
+           <td><label for="name">Select names:</label><br>
+              <select id='name' formControlName="medicineName" class="form-control">
+                <option *ngFor="let stock of stocks" [ngValue]='stock.name'>
+                  {{stock.name}}
+                </option>
+              </select>
+      </td>
+      <td>
+         <label for="quantity">Enter quantity of Medicine</label>
+         <input type="number" formControlName="demandCount" class="form-control"> 
+      </td>
+      <td>  
+        <button (click)="removeQuantity(i)" class="btn btn-danger">Remove</button>  
+      </td>  
+      </tr>
+      </table>
+      <button type="submit">Submit</button>
+      </form>
+      
+    </div>
+  </div>
+</div>
